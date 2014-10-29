@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FABAFD95-5B8E-4100-8CC5-EA9D7DDF03C2}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MSOMVC</RootNamespace>
+    <AssemblyName>MSOMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CFBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CFBase.dll</HintPath>
+    </Reference>
+    <Reference Include="CFFW, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CFFW.dll</HintPath>
+    </Reference>
+    <Reference Include="CFPUB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CFPUB.dll</HintPath>
+    </Reference>
+    <Reference Include="CWFW, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CWFW.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HashListView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="res\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="res\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="res\bootstrap\css\bootstrap.css" />
+    <Content Include="res\bootstrap\css\bootstrap.min.css" />
+    <Content Include="res\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="res\bootstrap\js\bootstrap.js" />
+    <Content Include="res\bootstrap\js\bootstrap.min.js" />
+    <Content Include="res\css\error.css" />
+    <Content Include="res\css\index.css" />
+    <Content Include="res\css\inpage\css\imgstyleblue.css" />
+    <Content Include="res\css\inpage\css\mainstyle.css" />
+    <Content Include="res\css\inpage\images\arrow2.gif" />
+    <Content Include="res\css\inpage\images\behance.png" />
+    <Content Include="res\css\inpage\images\bg.jpg" />
+    <Content Include="res\css\inpage\images\box.jpg" />
+    <Content Include="res\css\inpage\images\br.gif" />
+    <Content Include="res\css\inpage\images\ch.gif" />
+    <Content Include="res\css\inpage\images\check2.gif" />
+    <Content Include="res\css\inpage\images\de.gif" />
+    <Content Include="res\css\inpage\images\demo1.jpg" />
+    <Content Include="res\css\inpage\images\demo10.jpg" />
+    <Content Include="res\css\inpage\images\demo11.jpg" />
+    <Content Include="res\css\inpage\images\demo12.jpg" />
+    <Content Include="res\css\inpage\images\demo13.jpg" />
+    <Content Include="res\css\inpage\images\demo14.jpg" />
+    <Content Include="res\css\inpage\images\demo15.jpg" />
+    <Content Include="res\css\inpage\images\demo16.jpg" />
+    <Content Include="res\css\inpage\images\demo17.jpg" />
+    <Content Include="res\css\inpage\images\demo18.jpg" />
+    <Content Include="res\css\inpage\images\demo19.jpg" />
+    <Content Include="res\css\inpage\images\demo2.jpg" />
+    <Content Include="res\css\inpage\images\demo20.jpg" />
+    <Content Include="res\css\inpage\images\demo21.jpg" />
+    <Content Include="res\css\inpage\images\demo22 %281%29.jpg" />
+    <Content Include="res\css\inpage\images\demo22.jpg" />
+    <Content Include="res\css\inpage\images\demo23.jpg" />
+    <Content Include="res\css\inpage\images\demo24.jpg" />
+    <Content Include="res\css\inpage\images\demo25.jpg" />
+    <Content Include="res\css\inpage\images\demo26.jpg" />
+    <Content Include="res\css\inpage\images\demo27.jpg" />
+    <Content Include="res\css\inpage\images\demo28.jpg" />
+    <Content Include="res\css\inpage\images\demo29.jpg" />
+    <Content Include="res\css\inpage\images\demo3.jpg" />
+    <Content Include="res\css\inpage\images\demo30.jpg" />
+    <Content Include="res\css\inpage\images\demo31.jpg" />
+    <Content Include="res\css\inpage\images\demo32.jpg" />
+    <Content Include="res\css\inpage\images\demo33.jpg" />
+    <Content Include="res\css\inpage\images\demo34.jpg" />
+    <Content Include="res\css\inpage\images\demo35.jpg" />
+    <Content Include="res\css\inpage\images\demo36.jpg" />
+    <Content Include="res\css\inpage\images\demo37.jpg" />
+    <Content Include="res\css\inpage\images\demo38.jpg" />
+    <Content Include="res\css\inpage\images\demo39.jpg" />
+    <Content Include="res\css\inpage\images\demo4.jpg" />
+    <Content Include="res\css\inpage\images\demo40.jpg" />
+    <Content Include="res\css\inpage\images\demo41.jpg" />
+    <Content Include="res\css\inpage\images\demo42.jpg" />
+    <Content Include="res\css\inpage\images\demo43.jpg" />
+    <Content Include="res\css\inpage\images\demo44.jpg" />
+    <Content Include="res\css\inpage\images\demo45.jpg" />
+    <Content Include="res\css\inpage\images\demo46.jpg" />
+    <Content Include="res\css\inpage\images\demo47.jpg" />
+    <Content Include="res\css\inpage\images\demo48.jpg" />
+    <Content Include="res\css\inpage\images\demo49.jpg" />
+    <Content Include="res\css\inpage\images\demo5.jpg" />
+    <Content Include="res\css\inpage\images\demo50.jpg" />
+    <Content Include="res\css\inpage\images\demo6.jpg" />
+    <Content Include="res\css\inpage\images\demo7.jpg" />
+    <Content Include="res\css\inpage\images\demo8.jpg" />
+    <Content Include="res\css\inpage\images\demo9.jpg" />
+    <Content Include="res\css\inpage\images\design2.jpg" />
+    <Content Include="res\css\inpage\images\download.png" />
+    <Content Include="res\css\inpage\images\dt.gif" />
+    <Content Include="res\css\inpage\images\en.gif" />
+    <Content Include="res\css\inpage\images\es.gif" />
+    <Content Include="res\css\inpage\images\facebook.png" />
+    <Content Include="res\css\inpage\images\foot1.jpg" />
+    <Content Include="res\css\inpage\images\fr.gif" />
+    <Content Include="res\css\inpage\images\grid.png" />
+    <Content Include="res\css\inpage\images\it.gif" />
+    <Content Include="res\css\inpage\images\ja.gif" />
+    <Content Include="res\css\inpage\images\linkedin.png" />
+    <Content Include="res\css\inpage\images\logo2.png" />
+    <Content Include="res\css\inpage\images\macFFBgHack.png" />
+    <Content Include="res\css\inpage\images\navback.png" />
+    <Content Include="res\css\inpage\images\next.png" />
+    <Content Include="res\css\inpage\images\panorama %281%29.jpg" />
+    <Content Include="res\css\inpage\images\panorama.jpg" />
+    <Content Include="res\css\inpage\images\pause.png" />
+    <Content Include="res\css\inpage\images\pelican %281%29.jpg" />
+    <Content Include="res\css\inpage\images\pelican.jpg" />
+    <Content Include="res\css\inpage\images\plantation %281%29.jpg" />
+    <Content Include="res\css\inpage\images\plantation.jpg" />
+    <Content Include="res\css\inpage\images\playaforti %281%29.jpg" />
+    <Content Include="res\css\inpage\images\playaforti.jpg" />
+    <Content Include="res\css\inpage\images\prev.png" />
+    <Content Include="res\css\inpage\images\rss.png" />
+    <Content Include="res\css\inpage\images\ru.gif" />
+    <Content Include="res\css\inpage\images\rule.gif" />
+    <Content Include="res\css\inpage\images\rule1.gif" />
+    <Content Include="res\css\inpage\images\rule2.gif" />
+    <Content Include="res\css\inpage\images\rule3.gif" />
+    <Content Include="res\css\inpage\images\rule4.gif" />
+    <Content Include="res\css\inpage\images\se.gif" />
+    <Content Include="res\css\inpage\images\sheteboka %281%29.jpg" />
+    <Content Include="res\css\inpage\images\sheteboka.jpg" />
+    <Content Include="res\css\inpage\images\social2.jpg" />
+    <Content Include="res\css\inpage\images\twitter.png" />
+    <Content Include="res\css\inpage\images\windmills %281%29.jpg" />
+    <Content Include="res\css\inpage\images\windmills.jpg" />
+    <Content Include="res\css\inpage\imgstyleblue.css" />
+    <Content Include="res\css\inpage\mainstyle.css" />
+    <Content Include="res\css\main.css" />
+    <Content Include="res\headroom\headroom.min.js" />
+    <Content Include="res\img\bg.jpg" />
+    <Content Include="res\img\black_denim.png" />
+    <Content Include="res\img\cube_skin_61088553.png" />
+    <Content Include="res\img\cwtsico.png" />
+    <Content Include="res\img\hotnews_ac6c5b7e.png" />
+    <Content Include="res\img\loading.gif" />
+    <Content Include="res\img\loading_dark.gif" />
+    <Content Include="res\img\logo1.png" />
+    <Content Include="res\img\logo2.png" />
+    <Content Include="res\img\logo3.png" />
+    <Content Include="res\img\logo60b.png" />
+    <Content Include="res\img\logo_white_2a2fcb5a.png" />
+    <Content Include="res\img\menu_bg_110e96d0.png" />
+    <Content Include="res\img\nav.png" />
+    <Content Include="res\img\nav_used_btn_dark_4675c37c.png" />
+    <Content Include="res\img\new_menubar_bg_e2324b5b.png" />
+    <Content Include="res\img\new_menubar_icon_97cf4835.png" />
+    <Content Include="res\img\pack_small_skin_81349723.png" />
+    <Content Include="res\img\skin_dark_7e34cf2a.png" />
+    <Content Include="res\img\spis_9762e054.png" />
+    <Content Include="res\inc\404.aspx" />
+    <Content Include="res\inc\ads.aspx" />
+    <Content Include="res\inc\errpage.aspx" />
+    <Content Include="res\inc\foot.txt" />
+    <Content Include="res\inc\head.txt" />
+    <Content Include="res\inc\header.aspx" />
+    <Content Include="res\inc\righttool.aspx" />
+    <Content Include="res\inc\srhform.aspx" />
+    <Content Include="res\inc\staticfile.html" />
+    <Content Include="res\inc\statistic.aspx" />
+    <Content Include="res\inc\tail.txt" />
+    <Content Include="res\jpages\css\animate.css" />
+    <Content Include="res\jpages\css\github.css" />
+    <Content Include="res\jpages\css\jPages.css" />
+    <Content Include="res\jpages\css\style.css" />
+    <Content Include="res\jpages\img\back.gif" />
+    <Content Include="res\jpages\img\next.gif" />
+    <Content Include="res\jpages\img\preload.png" />
+    <Content Include="res\jpages\js\highlight.pack.js" />
+    <Content Include="res\jpages\js\jPages.js" />
+    <Content Include="res\jpages\js\jPages.min.js" />
+    <Content Include="res\jpages\js\jquery-1.8.2.min.js" />
+    <Content Include="res\jpages\js\jquery.lazyload.js" />
+    <Content Include="res\jpages\js\js.js" />
+    <Content Include="res\jpages\js\tabifier.js" />
+    <Content Include="res\js\a.js" />
+    <Content Include="res\js\boot.aspx" />
+    <Content Include="res\js\default.js" />
+    <Content Include="res\js\error.js" />
+    <Content Include="res\js\jquery-1.11.0.js" />
+    <Content Include="res\js\jquery-1.11.0.min.js" />
+    <Content Include="res\js\jquery-1.7.2.js" />
+    <Content Include="res\js\jquery-1.7.2.min.js" />
+    <Content Include="res\js\jquery-1.9.1.js" />
+    <Content Include="res\js\jquery-1.9.1.min.js" />
+    <Content Include="res\js\jquery.js" />
+    <Content Include="res\js\page.js" />
+    <Content Include="res\js\util.js" />
+    <Content Include="res\lib\bootstrap\css\bootstrap-docs.css" />
+    <Content Include="res\lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="res\lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="res\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="res\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="res\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="res\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="res\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="res\lib\Elastislide\css\custom.css" />
+    <Content Include="res\lib\Elastislide\css\demo.css" />
+    <Content Include="res\lib\Elastislide\css\elastislide.css" />
+    <Content Include="res\lib\Elastislide\images\bg.jpg" />
+    <Content Include="res\lib\Elastislide\images\black_denim.png" />
+    <Content Include="res\lib\Elastislide\images\large\1.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\10.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\11.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\12.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\13.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\14.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\15.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\16.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\17.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\18.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\19.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\2.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\20.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\3.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\4.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\5.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\6.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\7.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\8.jpg" />
+    <Content Include="res\lib\Elastislide\images\large\9.jpg" />
+    <Content Include="res\lib\Elastislide\images\loading.gif" />
+    <Content Include="res\lib\Elastislide\images\loading_dark.gif" />
+    <Content Include="res\lib\Elastislide\images\nav.png" />
+    <Content Include="res\lib\Elastislide\images\small\1.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\10.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\11.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\12.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\13.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\14.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\15.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\16.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\17.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\18.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\19.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\2.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\20.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\3.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\4.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\5.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\6.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\7.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\8.jpg" />
+    <Content Include="res\lib\Elastislide\images\small\9.jpg" />
+    <Content Include="res\lib\Elastislide\js\jquery.elastislide.js" />
+    <Content Include="res\lib\Elastislide\js\jquerypp.custom.js" />
+    <Content Include="res\lib\Elastislide\js\modernizr.custom.17475.js" />
+    <Content Include="res\lib\eSlide\.idea\encodings.xml" />
+    <Content Include="res\lib\eSlide\.idea\misc.xml" />
+    <Content Include="res\lib\eSlide\.idea\modules.xml" />
+    <Content Include="res\lib\eSlide\.idea\scopes\scope_settings.xml" />
+    <Content Include="res\lib\eSlide\.idea\vcs.xml" />
+    <Content Include="res\lib\eSlide\.idea\workspace.xml" />
+    <Content Include="res\lib\eSlide\css\eSilde.css" />
+    <Content Include="res\lib\eSlide\css\public.css" />
+    <Content Include="res\lib\eSlide\demo2.html" />
+    <Content Include="res\lib\eSlide\images\banner_.jpg" />
+    <Content Include="res\lib\eSlide\images\bg.png" />
+    <Content Include="res\lib\eSlide\images\hv_bg.png" />
+    <Content Include="res\lib\eSlide\images\list_banner1.jpg" />
+    <Content Include="res\lib\eSlide\images\test.jpg" />
+    <Content Include="res\lib\eSlide\images\test2.jpg" />
+    <Content Include="res\lib\eSlide\js\eSlide.js" />
+    <Content Include="res\lib\eSlide\js\jquery-1.7.2.min.js" />
+    <Content Include="res\lib\headroom\headroom.min.js" />
+    <Content Include="res\lib\jpages\css\animate.css" />
+    <Content Include="res\lib\jpages\css\github.css" />
+    <Content Include="res\lib\jpages\css\jPages.css" />
+    <Content Include="res\lib\jpages\css\style.css" />
+    <Content Include="res\lib\jpages\img\back.gif" />
+    <Content Include="res\lib\jpages\img\next.gif" />
+    <Content Include="res\lib\jpages\img\preload.png" />
+    <Content Include="res\lib\jpages\js\highlight.pack.js" />
+    <Content Include="res\lib\jpages\js\jPages.js" />
+    <Content Include="res\lib\jpages\js\jPages.min.js" />
+    <Content Include="res\lib\jpages\js\jquery-1.8.2.min.js" />
+    <Content Include="res\lib\jpages\js\jquery.lazyload.js" />
+    <Content Include="res\lib\jpages\js\js.js" />
+    <Content Include="res\lib\jpages\js\tabifier.js" />
+    <Content Include="res\lib\jPaginate\about.png" />
+    <Content Include="res\lib\jPaginate\bg.png" />
+    <Content Include="res\lib\jPaginate\codrops_back.png" />
+    <Content Include="res\lib\jPaginate\css\style.css" />
+    <Content Include="res\lib\jPaginate\images\next.png" />
+    <Content Include="res\lib\jPaginate\images\previous.png" />
+    <Content Include="res\lib\jPaginate\images\snext.png" />
+    <Content Include="res\lib\jPaginate\images\sprevious.png" />
+    <Content Include="res\lib\jPaginate\index.html" />
+    <Content Include="res\lib\jPaginate\jquery.paginate.js" />
+    <Content Include="res\lib\jquery-autocomplete\changelog.txt" />
+    <Content Include="res\lib\jquery-autocomplete\demo\bg.gif" />
+    <Content Include="res\lib\jquery-autocomplete\demo\index.html" />
+    <Content Include="res\lib\jquery-autocomplete\demo\indicator.gif" />
+    <Content Include="res\lib\jquery-autocomplete\demo\json.html" />
+    <Content Include="res\lib\jquery-autocomplete\demo\localdata.js" />
+    <Content Include="res\lib\jquery-autocomplete\demo\main.css" />
+    <Content Include="res\lib\jquery-autocomplete\demo\副本 index.html" />
+    <Content Include="res\lib\jquery-autocomplete\jquery.autocomplete.css" />
+    <Content Include="res\lib\jquery-autocomplete\jquery.autocomplete.js" />
+    <Content Include="res\lib\jquery-autocomplete\jquery.autocomplete.min.js" />
+    <Content Include="res\lib\jquery-autocomplete\jquery.autocomplete.pack.js" />
+    <Content Include="res\lib\jquery-autocomplete\lib\jquery.ajaxQueue.js" />
+    <Content Include="res\lib\jquery-autocomplete\lib\jquery.bgiframe.min.js" />
+    <Content Include="res\lib\jquery-autocomplete\lib\jquery.js" />
+    <Content Include="res\lib\jquery-autocomplete\lib\thickbox-compressed.js" />
+    <Content Include="res\lib\jquery-autocomplete\lib\thickbox.css" />
+    <Content Include="res\lib\jquery-powerFloat\css\powerFloat.css" />
+    <Content Include="res\lib\jquery-powerFloat\HTMLPage.htm" />
+    <Content Include="res\lib\jquery-powerFloat\img\loading.gif" />
+    <Content Include="res\lib\jquery-powerFloat\img\loading_s.gif" />
+    <Content Include="res\lib\jquery-powerFloat\img\vtip_arrow_b.png" />
+    <Content Include="res\lib\jquery-powerFloat\img\vtip_arrow_l.png" />
+    <Content Include="res\lib\jquery-powerFloat\img\vtip_arrow_r.png" />
+    <Content Include="res\lib\jquery-powerFloat\img\vtip_arrow_t.png" />
+    <Content Include="res\lib\jquery-powerFloat\js\jquery-powerFloat.js" />
+    <Content Include="res\lib\jquery.treeview\images\folder.gif" />
+    <Content Include="res\lib\jquery.treeview\images\treeview-default-line.gif" />
+    <Content Include="res\lib\jquery.treeview\images\treeview-default.gif" />
+    <Content Include="res\lib\jquery.treeview\images\treeview-red.gif" />
+    <Content Include="res\lib\jquery.treeview\jquery.treeview.css" />
+    <Content Include="res\lib\jquery.treeview\jquery.treeview.js" />
+    <Content Include="res\lib\jquery.ui\images\animated-overlay.gif" />
+    <Content Include="res\lib\jquery.ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="res\lib\jquery.ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="res\lib\jquery.ui\index.html" />
+    <Content Include="res\lib\jquery.ui\jquery-ui.css" />
+    <Content Include="res\lib\jquery.ui\jquery-ui.js" />
+    <Content Include="res\lib\jquery.ui\jquery-ui.min.css" />
+    <Content Include="res\lib\jquery.ui\jquery-ui.min.js" />
+    <Content Include="res\lib\jquery.ui\jquery-ui.structure.css" />
+    <Content Include="res\lib\jquery.ui\jquery-ui.structure.min.css" />
+    <Content Include="res\lib\jquery.ui\jquery-ui.theme.css" />
+    <Content Include="res\lib\jquery.ui\jquery-ui.theme.min.css" />
+    <Content Include="res\lib\magnifier\css\MagicZoom.css" />
+    <Content Include="res\lib\magnifier\css\ShopShow.css" />
+    <Content Include="res\lib\magnifier\js\MagicZoom.js" />
+    <Content Include="res\lib\magnifier\js\magnifier.js" />
+    <Content Include="res\lib\magnifier\js\ShopShow.js" />
+    <Content Include="res\lib\my97datepicker\calendar.js" />
+    <Content Include="res\lib\my97datepicker\lang\en.js" />
+    <Content Include="res\lib\my97datepicker\lang\zh-cn.js" />
+    <Content Include="res\lib\my97datepicker\lang\zh-tw.js" />
+    <Content Include="res\lib\my97datepicker\skin\datePicker.gif" />
+    <Content Include="res\lib\my97datepicker\skin\default\datepicker.css" />
+    <Content Include="res\lib\my97datepicker\skin\default\img.gif" />
+    <Content Include="res\lib\my97datepicker\skin\green\datepicker.css" />
+    <Content Include="res\lib\my97datepicker\skin\green\img.gif" />
+    <Content Include="res\lib\my97datepicker\skin\WdatePicker.css" />
+    <Content Include="res\lib\my97datepicker\skin\whyGreen\bg.jpg" />
+    <Content Include="res\lib\my97datepicker\skin\whyGreen\datepicker.css" />
+    <Content Include="res\lib\my97datepicker\skin\whyGreen\img.gif" />
+    <Content Include="res\lib\my97datepicker\wdatepicker.js" />
+    <Content Include="res\lib\parsley\parsley.css" />
+    <Content Include="res\lib\parsley\parsley.js" />
+    <Content Include="res\lib\slider\indexsprite.png" />
+    <Content Include="res\lib\slider\plugTest.htm" />
+    <Content Include="res\lib\slider\sa.css" />
+    <Content Include="res\lib\slider\sa.js" />
+    <Content Include="res\lib\zebradialog\css\coffee_48.png" />
+    <Content Include="res\lib\zebradialog\css\confirmation.png" />
+    <Content Include="res\lib\zebradialog\css\error.png" />
+    <Content Include="res\lib\zebradialog\css\icons.txt" />
+    <Content Include="res\lib\zebradialog\css\index.html" />
+    <Content Include="res\lib\zebradialog\css\information.png" />
+    <Content Include="res\lib\zebradialog\css\question.png" />
+    <Content Include="res\lib\zebradialog\css\reset.css" />
+    <Content Include="res\lib\zebradialog\css\style.css" />
+    <Content Include="res\lib\zebradialog\css\warning.png" />
+    <Content Include="res\lib\zebradialog\css\zebra_dialog.css" />
+    <Content Include="res\lib\zebradialog\js\zebra_dialog.js" />
+    <Content Include="res\lib\zebradialog\js\zebra_dialog.src.js" />
+    <Content Include="res\lib\ZeroClipboard\ZeroClipboard.js" />
+    <Content Include="res\lib\ZeroClipboard\ZeroClipboard.swf" />
+    <Content Include="Scripts\jquery-1.7.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="index\segments.gen" />
+    <None Include="index\segments_4" />
+    <None Include="index\segments_6" />
+    <None Include="index\segments_hz" />
+    <None Include="index\_110.cfs" />
+    <None Include="index\_8.cfx" />
+    <None Include="index\_b.cfs" />
+    <None Include="index\_s.cfs" />
+    <None Include="res\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="res\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="res\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="res\js\jquery-1.11.0.min.map" />
+    <None Include="res\lib\bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="res\lib\bootstrap\css\bootstrap.css.map" />
+    <None Include="res\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="res\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="res\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="res\lib\Elastislide\images\.DS_Store" />
+    <None Include="res\lib\eSlide\.idea\.name" />
+    <None Include="res\lib\eSlide\.idea\testSlider.iml" />
+    <None Include="res\lib\jquery-autocomplete\demo\emails.php" />
+    <None Include="res\lib\jquery-autocomplete\demo\emails.phps" />
+    <None Include="res\lib\jquery-autocomplete\demo\images.php" />
+    <None Include="res\lib\jquery-autocomplete\demo\search.php" />
+    <None Include="res\lib\jquery-autocomplete\demo\search.phps" />
+    <None Include="res\lib\jquery-autocomplete\todo" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\List.cshtml" />
+    <Content Include="Views\Shared\SearchForm.cshtml" />
+    <Content Include="Views\Home\Detail.cshtml" />
+    <Content Include="Views\Home\Help.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MSOSKY.BL\MSOSKY.BL.csproj">
+      <Project>{3F7DEE93-92AE-4A51-9F69-74E1316F464B}</Project>
+      <Name>MSOSKY.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSOSKY.WEB\MSOSKY.WEB.csproj">
+      <Project>{C504E40D-638D-4463-B2D3-44CE81F12B5F}</Project>
+      <Name>MSOSKY.WEB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{19A5828E-18AF-48D6-88C2-E01C54336BF2}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52522</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

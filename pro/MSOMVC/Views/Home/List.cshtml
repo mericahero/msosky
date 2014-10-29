@@ -1,0 +1,51 @@
+﻿@model MSOMVC.Models.HashListView
+
+@{
+    ViewBag.Title = Model.SearchParam.KeyWord;
+}
+
+@Html.Partial("SearchForm",Model.SearchParam);
+
+<div class="container">
+    <div class="row alert " id="d_srhsummary">为您找到相关结果@(Model.TotalCount)个(耗时@(Model.Mecs)毫秒)</div>
+    <div class="row">
+        <div class="holder"></div>
+        <div id="itemContainer" class="itemContainer">
+        @foreach (var item in Model.List)
+        {
+            <dl>
+            <dt><a target="_blank" href="/detail/@(item.HashId)">@Html.Raw(item.BodyPreview)</a></dt>
+            <dd class="itemShowTitle">@item.KeyContent</dd>
+            <dd class="itemShowDetail">创建时间：@item.UpdateTime 文件个数：@item.FileCnt 文件大小：@item.TotalSize</dd>
+            </dl>
+        }
+        </div>
+        <div class="mso_pager"></div>
+        <div class="holder"></div>
+    </div>
+</div>
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(function(){        
+            $(".mso_pager").paginate({
+				count 		: @Model.PageCount,
+				start 		: @Model.PageIndex,
+				display     : 15,
+				border					: false,
+				text_color  			: '#888',
+				background_color    	: '#EEE',	
+				text_hover_color  		: 'black',
+				background_hover_color	: '#CFCFCF',
+                onChange                : function (p){window.location.href="/list@(Model.SearchParam.SearchType)/@(Model.SearchParam.KeyWord)/"+p }
+			});
+        });
+
+	    function setSearchType(v) {
+	        $("#srhTypeNavigater").children().removeClass("active").eq(v ? v : 0).addClass("active");
+	        $("#srhType").val(v);
+	    }
+	</script>
+}

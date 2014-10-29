@@ -1,0 +1,75 @@
+﻿@model MSOMVC.Models.HashItem
+
+@{
+    ViewBag.Title = Model.KeyContent;
+}
+
+@Html.Partial("SearchForm",Model.SearchParam);
+@using Utility;
+
+<div class="container">   
+    <div class="col-lg-9">
+
+    <h3>@Model.KeyContent</h3>
+    <p>
+        创建时间：@Model.RecvTime.ToString("yyyy-MM-dd")<br />
+        更新时间：@Model.RecvTime.ToString("yyyy-MM-dd")<br />
+        文件数：@Model.FileCnt<br />
+        文件大小：@Model.TotalSize<br />
+        热度：@Model.RecvTimes<br /><br />
+        <abbr title="磁力链接">磁力链接下载</abbr>：<span><a id="t_marglink" href="javascript:void(0)">magnet:?xt=urn:btih:@Model.HashKey</a></span><a href="javascript:void(0)" class="btn btn-link btn-sm" id="a_sel_marglink"> 复制磁力链接</a> 
+    </p>
+
+    @if (Model.Type == 1)
+    {
+    <p>
+        试试<abbr title="云播">云播</abbr><br />
+        @foreach (var item in PubClass.GetYunBoUrl(@Model.HashKey))
+        {
+            <a target="_blank" href="@item.Value">@item.Key</a>@:&nbsp;&nbsp;
+        }
+    </p>
+    }
+
+    <h4>文件列表</h4>
+
+    <div style="">               
+        <ul class="list-unstyled">
+            @if (Model.Detail == null)
+            {
+                <li>没有数据！</li>
+            }
+            else
+            {
+                foreach (var item in Model.Detail)
+                {
+                    <li>@item.Name 大小：@item.FileSize </li>    
+                }
+            }
+
+        </ul>
+    </div>
+      
+
+</div>
+</div>
+
+@section scripts
+{
+    <script src="/res/lib/ZeroClipboard/ZeroClipboard.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            ZeroClipboard.setMoviePath("/res/lib/ZeroClipboard/ZeroClipboard.swf");
+            clip = new ZeroClipboard.Client();
+            clip.setHandCursor(true);
+            clip.setText($("#t_marglink").text());
+            clip.glue("a_sel_marglink");
+            clip.addEventListener("complete", function () {
+                MSO.Msg.Info("复制成功！您可以将磁力链接粘贴到迅雷下载任务中，使用迅雷下载。");
+            });
+            $(window).resize(function () {
+                clip.reposition();
+            });
+        });
+    </script>
+}

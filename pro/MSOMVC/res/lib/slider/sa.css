@@ -1,0 +1,80 @@
+﻿/*slider*/
+.indexW ol,.indexW ul,.indexW li{margin:0;padding:0;}
+.indexW {color:#666666;font: 12px/150% Arial,Verdana,"宋体";}
+.indexW  ol,.indexW  ul{list-style:none;}
+.indexW img{border:0;}
+.indexW{width:1200px;margin:0 auto;}
+
+.mTitle{border-bottom:2px solid #aaaaaa;line-height:25px;padding:0 0 7px 0;height:25px;text-align:center;}
+.toppromo{margin:0 auto;position:relative;text-align:center;}.topclose{position:absolute;top:5px;left:50%;margin-left:575px;width:25px;height:16px;background:url(topclose.png) no-repeat center center;cursor:pointer;text-indent:-9999px;}.countdown{background:url(http://p.sfbest.com/article/1383820599.jpg) no-repeat;height:95px;width:1000px;overflow:hidden;zoom:1;}.countdownlink{float:left;width:650px;height:95px;display:block;text-indent:-9999px;}#timer{float:right;width:350px;}#timer span{float:left;width:86px;height:80px;padding:12px 0 0 30px;color:white;font-size:46px;font-weight:bold;font-family:Arial,Helvetica,sans-serif;text-align:center;line-height:80px;overflow:hidden;}span.icon-cx{position:absolute;display:block;width:46px;height:46px;z-index:90;right:5px;top:5px;}
+.toppromo .banner{width:100%;height:80px;}
+.toppromo .banner a{width:1200px;height:80px;display:block;text-indent:-9999px;margin:0 auto;}
+.toppromo .topshow{width:100%;height:450px;}
+.toppromo .topshow a{width:1200px;height:450px;display:block;text-indent:-9999px;margin:0 auto;}
+.slide_wrap{height:508px;position:relative;overflow:hidden;}
+.mini_pic{float:left;overflow:hidden;zoom:1;width:269px;border-left:1px solid #f2f2f2;}
+.mini_pic a{position:relative;width:269px;height:131px;display:block;float:left;border-bottom:1px solid #f2f2f2}
+.mini_pic img{width:269px;height:131px;}
+.mini_pic u{display:none;width:269px;height:131px;-moz-opacity:.1;-khtml-opacity:.1;opacity:.1;filter:alpha(opacity=10);background-color:#646464;position:absolute;top:0;left:0;}
+.mini_pic a.bigger{height:243px}
+.mini_pic a.bigger img{height:243px}
+.mini_pic a.bigger u{height:243px;}
+.mini_pic a.hovers u{display:block;}
+.mini_pic a.bg_none{background-image:none;}
+.indexSlide{float:left;width:752px;height:508px;overflow:hidden;}
+.rSide{float:right;width:220px;}
+.slide_show{width:752px;height:508px;position:relative;z-index:29;}
+    .slide_show ol{height:508px;position:absolute;left:0;top:0;}
+    .slide_show ol li{float:left;width:752px;height:508px;}
+    .slide_show ol .cur{position:relative;}
+    .slide_show ol li .big_pic{float:left;width:500px;height:508px;display:block;}
+    .slide_show ol li .big_pic img{width:500px;height:508px;}
+    .slide_show ol li .fore_pic{float:left;width:752px;height:508px;display:block;}
+    .slide_show ol li .fore_pic img{width:752px;height:508px;}
+    .slide_show ul{position:absolute;z-index:99;right:285px;bottom:10px;}
+    .slide_show ul li{height:20px;width:20px;float:left;cursor:pointer;margin-right:5px;_display:inline;background-color:#a8a8a8;text-align:center;line-height:20px;border-radius:10px;color:white;}
+    .slide_show ul li.cur{background-color:#ffa827;cursor:default;}
+    .slide_show a.show_next,.slide_show a.show_pre{width:39px;height:50px;display:block;position:absolute;top:229px;display:none;}
+    .slide_show a.show_next{right:0;}
+    .slide_show a.show_pre{left:0;}
+    .slide_show a.show_next s{background:url(indexsprite.png) no-repeat -40px -256px;width:39px;height:50px;display:block;cursor:pointer;filter:alpha(opacity=40);opacity:0.4;}
+    .slide_show a.show_pre s{background:url(indexsprite.png) no-repeat 0px -256px;width:39px;height:50px;display:block;cursor:pointer;filter:alpha(opacity=40);opacity:0.4;}
+    .slide_show a.show_next:hover s,.slide_show a.show_pre:hover s{filter:alpha(opacity=80);opacity:0.8;}
+.b2c_banner .indexSlide{float:left;width:800px;height:400px;overflow:hidden;}
+.b2c_banner .rSide{float:right;width:172px;}
+.b2c_banner .slide_show{width:800px;height:400px;position:relative;z-index:29;}
+    .b2c_banner .slide_show ol{height:400px;position:absolute;left:0;top:0;}
+    .b2c_banner .slide_show ol li{float:left;width:800px;height:400px;}
+    .b2c_banner .slide_show ol .cur{position:relative;}
+    .b2c_banner .slide_show ol li .big_pic{float:left;width:500px;height:400px;display:block;}
+    .b2c_banner .slide_show ol li .big_pic img{width:500px;height:400px;}
+    .b2c_banner .slide_show ol li .fore_pic{float:left;width:800px;height:400px;display:block;}
+    .b2c_banner .slide_show ol li .fore_pic img{width:800px;height:400px;}
+    .b2c_banner .slide_show ul{position:absolute;z-index:99;right:285px;bottom:10px;}
+    .b2c_banner .slide_show ul li{height:20px;width:20px;float:left;cursor:pointer;margin-right:5px;_display:inline;background-color:#a8a8a8;text-align:center;line-height:20px;border-radius:10px;color:white;}
+    .b2c_banner .slide_show ul li.cur{background-color:#ffa827;cursor:default;}
+    .b2c_banner .slide_show a.show_next,
+    .b2c_banner .slide_show a.show_pre{width:39px;height:50px;display:block;position:absolute;top:229px;display:none;}
+    .b2c_banner .slide_show a.show_next{right:0;}
+    .b2c_banner .slide_show a.show_pre{left:0;}
+    .b2c_banner .slide_show a.show_next s{background:url(indexsprite.png) no-repeat -40px -256px;width:39px;height:50px;display:block;cursor:pointer;filter:alpha(opacity=40);opacity:0.4;}
+    .b2c_banner .slide_show a.show_pre s{background:url(indexsprite.png) no-repeat 0px -256px;width:39px;height:50px;display:block;cursor:pointer;filter:alpha(opacity=40);opacity:0.4;}
+    .b2c_banner .slide_show a.show_next:hover s,
+    .b2c_banner .slide_show a.show_pre:hover s{filter:alpha(opacity=80);opacity:0.8;}
+
+
+.rTopImg{width:220px; float:right}
+    .rTopImg .a-img{position:relative;display:block;overflow:hidden;}
+    .rTopImg .r-img,.rTopImg .r-img img{width:172px;height:133px;}
+    .rTopImg .a-img img{position:absolute;left:0;width:220px;}
+    
+.b2c_banner .rTopImg{width:172px; float:right}
+    .b2c_banner .rTopImg .a-img{position:relative;display:block;overflow:hidden;}
+    .b2c_banner .rTopImg .r-img,.b2c_banner.rTopImg .r-img img{width:172px;height:133px;}
+    .b2c_banner .rTopImg .a-img img{position:absolute;left:0;width:172px;}
+
+
+
+.rImg2{height:106px;width:218px;border:1px solid #e9e9e9;overflow:hidden;}
+.rImg2 img{height:106px;width:218px;}
+ 

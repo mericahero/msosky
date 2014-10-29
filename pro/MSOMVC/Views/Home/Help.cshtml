@@ -1,0 +1,172 @@
+﻿@{
+    ViewBag.Title = "Help";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/bundles/css")
+    @Scripts.Render("~/bundles/basejs")
+
+    <style type="text/css">
+        .navbar-inverse{background-image: linear-gradient(to bottom,  #c12e2a 0, #d9534f 100%);}
+        
+    </style>
+
+</head>
+<body>
+<div class="bs-docs-header" id="content">
+      <div class="container">
+        <h1>MSOSKY - MAN SO SKY</h1>
+        <p>帮助您快速了解MSOSKY</p>        
+      </div>
+    </div>
+    
+    <div class="container bs-docs-container">
+        <div class="row">
+            
+            <div class="col-md-9">
+
+
+                <div class="bs-docs-section">
+                    <h1 id="about" class="page-header">关于MSOSKY</h1>
+                    <p class="bs-callout">向您介绍我</p>
+                    <h3 id="about-what">什么是MSOSKY</h3>
+					<p>MSOSKY是一个最专业的BT种子搜索和磁力链接资源提供网站,目前已经收录了上千万BT种子的磁力链接,支持磁力链接转换BT种子,BT种子转换磁力链接,提供在线云点播功能，一个MAN的天堂，MAN点搜哦！</p>
+
+                    <h3 id="about-how">怎么记住我</h3>
+                    <p>标题所示，msosky可以通过以下方式记忆</p>
+                    <ul>
+                        <li>m - 当然就是man啦，至于是哪个man，就看客官您想象咯 ^_^，</li>
+                        <li>so - 这个自然就是搜搜搜搜搜，搜它个天昏地暗地搜的搜啦</li>
+                        <li>sky - 不用说，到这里，就是您的天堂了</li>
+                    </ul>
+                    <p>客官您一定要man一点哦~~</p>
+
+                    <h3 id="about-where">记住我有什么用</h3>
+                    <p>在当今这个浮躁的社会，在如今这个信息化大爆炸的时代，您是不是觉得自己在网络上太过渺小了，有没有一种感觉，自己想要的东西很难找到？是不是有种蛋蛋的忧桑？如果有，请别灰心，因为，您还有我！您可以在我这里找到你的方向，在如此浩瀚的网络时代里发现真我，快速找到您想要的一切。</p>
+
+                    <h3 id="about-warning">友情提示</h3>
+                    <p>由于当前互联网局势鱼龙混杂，各种不明势力正侵蚀着我们纯洁又可爱的网络家园，再加上大环境的局限，还有作为一个良民，我必须遵循我大中华法律。在此，我郑重声明：</p>
+                    <p class="bs-callout bs-callout-warning">本站所有内容系自动搜索生成的结果，排列及分类仅为方便使用，本站与内容的出处无关。</p>
+                    <p>如若不幸，您在我这里发现了什么不好的东西，请您一定告知 →:(，如若我不小心侵犯了您的合法权益，烦请您在原谅我的同时务必通知到我，我会及时忏悔，保证绝不再犯！</p>
+
+                    <h3 id="about-suggestion">投诉建议</h3>
+                    <p>如果您觉得我有什么不到位的地方，如果您觉得我哪里不够乖巧，如果您觉得我面目可憎，如果您觉得您能帮助到我，如果……只要您想跟我交流，您都可以通过点击<a href="">投诉/建议</a>来告知于我，您还可以通告<a href="mailto:aheroaa@gmail.com">aheroaa@@gmail.com</a>直接联系站长。</p>
+                    
+                </div>
+
+                <div class="bs-docs-section">
+                    <h1 id="definition" class="page-header">概念解释</h1>
+                    <p class="bs-callout bs-callout-success">概念部分是为了让您在使用我的时候有什么不懂的术语可以尽可能快速地查到，部分内容参照某百科(*^__^*) </p>
+
+                    <h3 id="definition-bt">BT种子</h3>
+                    <p>呀，这个东西我没听说过呢，不过我想聪明的客官您一定知道，为避免各位看笑话，我立马快速去度了一下，查到了以下东西，嗯嗯，是这样的</p>
+                    <p><code>BT种子</code>一种电脑文件。装有BT下载必须的文件信息，作用相当于HTTP下载里的URL连接。</p>
+                    <p class="bs-callout bs-callout-success">它的后缀名通常是.torrent，大小一般是10-200kb</p>
+                    <p>通过BT种子下载资源一般就是获得到了种子文件后使用 <strong>迅雷、BTVampire、BitTorrent</strong> 等软件下载</p>
+                    <p>至于如何制作，我想我们大可不必知道了。。。。</p>
+
+                    <h3 id="definition-mag">磁力链接</h3>
+                    <p>嗯，这是个相对高级的概念，某科上是这么说的</p>
+                    <p class="bs-callout bs-callout-sccess">磁力链接，简单的说（Magnet URI scheme）：类似下面这样以“magnet:?xt=urn:btih:”开头的字符串，就是一条“磁力链接；确切的说：“磁力链接”的主要作用是识别【能够通过“点对点技术（即：P2P）”下载的文件】。这种链接是通过不同文件内容的Hash结果生成一个纯文本的“数字指纹”，来识别文件的。而不是基于文件的位置或者名称。<br />
+                        换个说法，力链接是一种特殊链接，但是它与传统基于文件的位置或名称的普通链接（如http://xxx）不一样，它只是通过不同文件内容的Hash结果生成一个纯文本的“数字指纹”，并用它来识别文件。它类似于生活消费品包装上常见的条码，不同的是这个“数字指纹”可以被任何人从任何文件上生成，这也就注定了磁力链接不需要任何“中心机构”的支持（例如：BT Tracker服务器），且识别准确度极高。因此任何人都可以生成一个Magnet 链接并确保通过该链接下载的文件准确无误。
+更简单地说：类似【magnet:?xt=urn:sha1:ABCDEFGHIJKLMNOPQRSTUVWXYZ12345678】这样以“magnet:?”开头的字符串，就是一条磁力链接，其在网页上的图标通常如图1所示，像一块磁铁，很容易辨别。
+                    </p>
+                    <p>总而言之，言而总之，磁力链接就是BT的扩展版，你只需要打开迅雷等下载软件，然后把地址粘贴进去，它就可以下载了，您无须一个.torrent的文件啦</p>
+
+
+                    <h3 id="definition-dht">DHT</h3>
+                    <p>这个就是高级点的概念了</p>
+                    <p class="bs-callout bs-callout-success">HT(Distributed Hash Table，分布式哈希表)类似Tracker的根据种子特征码返回种子信息的网络。DHT全称叫分布式哈希表(Distributed Hash Table)，是一种分布式存储方法。在不需要服务器的情况下，每个客户端负责一个小范围的路由，并负责存储一小部分数据，从而实现整个DHT网络的寻址和存储。新版BitComet允许同行连接DHT网络和Tracker，也就是说在完全不连上Tracker服务器的情况下，也可以很好的下载，因为它可以在DHT网络中寻找下载同一文件的其他用户。</p>
+                    <p>概括地讲，您无需知道它是什么，您只需要知道，您就在它这个网络中，并且可以使用这个网络就行了</p>
+
+                    <h3 id="definition-addin">附注</h3>
+                    <p>哈哈，介绍了一点概念，如果您还有啥不清楚的，或者您觉得我还需要呈现什么的，您可以通过<a href="">投诉/建议</a>通道来告诉我哦~~</p>
+                </div>
+
+                <div class="bs-docs-section">
+                    <h1 id="use" class="page-header">使用</h1>
+                    <p class="bs-callout bs-callout-success">介绍如何使用本站<br />其实非常简单，搜索→定位→查看→使用</p>
+                    <h3 id="use-search">搜索</h3>
+                    <p>
+                        在您打开 <a href="http://www.msosky.com">本站</a> 后，您将看到这样的搜索框<br />
+                        @Html.Partial("SearchForm", new MSOMVC.Models.SearchUnit(0, ""));
+                    </p>
+                    <p>您可以搜索您想要的内容进行检索。如，您搜索@(Html.ActionLink("<code>小时代</code>","List",new {keyword="小时代"}))就会得到如下列表</p>
+                </div>
+                
+
+            </div>
+
+
+
+
+
+            
+
+            <div class="col-md-3">
+                <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+                    <ul class="nav bs-docs-sidenav">
+                        <li>
+                            <a href="#about">关于MSOSKY</a>    
+                            <ul class="nav">
+                                <li><a href="#about-what">什么是MSOSKY</a></li>
+                                <li><a href="#about-how">怎么记住我</a></li>
+                                <li><a href="#about-where">记住我有什么用</a></li>
+                                <li><a href="#about-warning">友情提示</a></li>
+                                <li><a href="#about-suggestion">投诉建议</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#definition">概念解释</a>
+                            <ul class="nav">
+                                <li><a href="#definition-bt">BT种子</a></li>
+                                <li><a href="#definition-mag">磁力链接</a></li>
+                                <li><a href="#definition-dht">DHT</a></li>
+                                <li><a href="#definition-addin">附注</a></li>
+                            </ul>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    @Scripts.Render("~/bundles/js")
+    
+	<script type="text/javascript">
+
+	    $(function () {
+	        var b = $(window),
+			c = $(document.body);
+	        c.scrollspy({ target: ".bs-docs-sidebar" });
+	        b.on("load", function () { c.scrollspy("refresh") });
+	        $(".bs-docs-container [href=#]").click(function () { $.preventDefault() });
+	        setTimeout(function () {
+	            var b = $(".bs-docs-sidebar");
+	            b.affix({
+	                offset: {
+	                    top: function () {
+	                        var c = b.offset().top,
+							d = parseInt(b.children(0).css("margin-top"), 10),
+							e = $(".bs-docs-nav").height();
+	                        return this.top = c - e - d
+	                    },
+	                    bottom: function () {
+	                        return this.bottom = $(".bs-docs-footer").outerHeight(!0)
+	                    }
+	                }
+	            })
+	        }, 100);
+	        setTimeout(function () {
+	            $(".bs-top").affix()
+	        }, 100)
+	    })
+    </script>
+    </body>
+    </html>

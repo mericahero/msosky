@@ -1,0 +1,76 @@
+.arrow_l
+{
+    right: -10px;
+    position: absolute;
+    margin-left: -1px;
+    bottom: 160px;
+    background: url(../img/vtip_arrow_l.png) no-repeat;
+    width: 11px;
+    height: 22px;
+    top: 48%;
+}
+.arrow_r
+{
+    right: -10px;
+    position: absolute;
+    margin-left: -1px;
+    bottom: 160px;
+    background: url(../img/vtip_arrow_r.png) no-repeat;
+    width: 11px;
+    height: 22px;
+    top: 5%;
+    border: 0;
+}
+
+.arrow_t
+{
+    right: -10px;
+    position: absolute;
+    margin-left: -1px;
+    bottom: 160px;
+    background: url(../img/vtip_arrow_t.png) no-repeat;
+    width: 22px;
+    height: 11px;
+}
+
+.arrow_b
+{
+    right: -10px;
+    position: absolute;
+    margin-left: -1px;
+    bottom: 160px;
+    background: url(../img/vtip_arrow_b.png) no-repeat;
+    width: 22px;
+    height: 11px;
+}
+.arrow_box
+{
+    width: 380px;
+    position: absolute;
+    top: 10px;
+    border: 1px solid #DAE4E7;
+    display: none;
+    background:#fff;
+    z-index:1000
+}
+
+
+
+.floatcar{padding:10px;width:340px;font-size:12px;font-weight:normal;line-height:20px;}
+.floatcar .title{color:#6c6c6c;border-bottom:1px solid #1b6146;height:24px;}
+.floatcar .total p{width:170px;float:left;}
+.floatcar .total p font{color:#ea5404;font-size:14px;font-weight:bold;}
+.floatcar ul{margin:0px;padding:0px;display:block;position:relative;max-height:200px;_height:200px;overflow:auto;}
+.floatcar ul li{margin:0px; padding:12px 0px 12px 0px;height:40px;position:relative; border-bottom:1px dashed #ccc; line-height:18px;color:#565656;}
+.floatcar ul li:hover{ background:#f5f5f5}
+.floatcar ul li .l{position:absolute;width:45px;height:36px;}
+.floatcar ul li .l img{width:40px;height:40px;vertical-align:middle;border:1px solid #ccc;}
+.floatcar ul li .c{position:absolute;width:200px;height:36px;left:48px;top:14px; overflow:hidden;}
+.floatcar ul li .c a{color:#565656; text-decoration:none}
+.floatcar ul li .c a:hover{ text-decoration:underline}
+.floatcar ul li .r{position:absolute; text-align:right;width:80px;height:36px;right:0px;}
+.floatcar ul li .r font{color:#ea5404;font-size:14px;font-weight:bold;}
+.floatcar ul li .r a{clear:both;color:#999999; text-decoration:none}
+.floatcar ul li .r a:hover{ text-decoration:underline}
+a.submit5{font-size:12px;background:#6C9C0A;color:#fff;margin:0px 0px 0px 0px;padding:4px 8px 4px 8px;height:22px;line-height:22px;cursor:pointer;vertical-align:middle;vertical-align:baseline\9;text-decoration:none;}
+a.submit5:hover{ background:#40536F; color:White}

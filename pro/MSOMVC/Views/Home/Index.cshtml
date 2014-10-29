@@ -1,0 +1,51 @@
+﻿@model IList<MSOMVC.Models.Recommend>
+
+@{
+    ViewBag.Title = "MAN搜 MAN搜乐园";
+}
+
+<div class="container mso-form-container">
+    <div class="row">
+        <div class="col-lg-offset-4 col-lg-4"><img alt="" src="/res/img/logo1.png" width="270" height="129" /></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-9">
+            <ul class="nav nav-tabs" id="srhTypeNavigater">
+                <li class="active"><a href="javascript:setSearchType(0)">全部</a></li>
+                <li><a href="javascript:setSearchType(1)">视频</a></li>
+                <li><a href="javascript:setSearchType(2)">图片</a></li>
+                <li><a href="javascript:setSearchType(3)">音乐</a></li>
+                <li><a href="javascript:setSearchType(4)">电子书</a></li>
+                <li><a href="javascript:setSearchType(5)">程序</a></li>
+                <li><a href="javascript:setSearchType(6)">其它</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="tab-content mso-form-srhblock col-lg-offset-2 col-lg-10">
+            <form class="form-search" onsubmit="return checkSrhForm()">
+            <input type="hidden" name="t" id="srhType" value="0" />
+                <div class="form-group">
+                    <input type="search"  placeholder="您想看啥电影？" class="mso-form-control input-lg" id="mso_srh_wd" name="kw" style="width:740px;" />
+                    <button type="submit" class="btn btn-danger btn-lg"><i class="glyphicon glyphicon-search"></i>&nbsp;搜&nbsp;&nbsp;索</button>
+                </div>                            
+            </form>
+        </div>
+    </div>
+
+    <div class="row mso-recommend">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-7">
+            <dl class="dl-horizontal">
+            <dt>站长推荐</dt>
+            @foreach (var item in Model)
+            {
+                <dd>@Html.ActionLink(item.Title, "List", new { keyword=item.Title })</dd>
+            }
+            </dl>
+        </div>        
+    </div>
+
+</div>
+
+
